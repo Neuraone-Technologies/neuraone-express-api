@@ -19,6 +19,17 @@ npm test
 
 Tests use Node's built-in runner and real HTTP requests on an ephemeral local port.
 
+## Test coverage
+
+`npm test` passed all four tests on Node.js 24.19.0:
+
+- JSON metadata, health responses, and request IDs.
+- Project creation, retrieval, filtering, and pagination.
+- Invalid bodies, malformed JSON, oversized input, invalid queries, and missing routes.
+- Startup configuration validation.
+
+Tests create isolated app instances and close their HTTP servers after each case.
+
 ## Endpoints
 
 | Method | Path | Result |
